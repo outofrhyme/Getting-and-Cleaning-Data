@@ -2,9 +2,15 @@
 
 ### Description
 
-The dataset tidy.txt was created using the UCI HAR Dataset. It is a clean set
-containing the average values for each variable for each subject and activity
-pair, across both the training and test data.
+The dataset tidy.txt was created using run_analysis(tidy) against the UCI HAR 
+Dataset. It is a clean set containing the average values for each variable for 
+each subject and activity pair, across both the training and test data.
+
+The tidy dataset contains the average of each variable for each activity and 
+subject. It is built using the full dataset, which has been melted and recast.
+There is one row for each combination of unique subject and activity, and the
+columns reflect the average values for each variable for that particular 
+combination of subject and activity.
 
 ### Details
 
@@ -12,7 +18,9 @@ The dataset tidy.txt was created using run_analysis.R. The following steps were
 performed against the original data set:
 
 * Read activity and feature labels into vectors.
-* Cleaned up the punctuation in the features and formatted the column headers using gsub.
-* Read all test and training data into vectors and merged activity labels to create human-readable labels for each activity.
+* Stripped the punctuation in the features to make them more readable using gsub, and formatted the column headers to include label names for the "subject" and "activity" columns.
+* Read all test and training data into vectors, and merged the activity labels to create human-readable labels for each activity.
 * Built and bound the test and training data frames together using the vectors created in the previous step.
 * Used melt and dcast against the aggregate data set to create a tidy data set with the average of each variable for each activity and each subject.
+
+Please see the README for run_analysis for further details.
