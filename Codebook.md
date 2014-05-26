@@ -23,4 +23,4 @@ performed against the original data set:
 * Built and bound the test and training data frames together using the vectors created in the previous step.
 * Used melt and dcast against the aggregate data set to create a tidy data set with the average of each variable for each activity and each subject.
 
-Please see the README for run_analysis for further details.
+Please see the [README for run_analysis](https://github.com/outofrhyme/Getting-and-Cleaning-Data/blob/master/README.md) for further details on the script that produced the tidy dataset, and please see the [README for the UCI HAR Dataset](https://github.com/outofrhyme/Getting-and-Cleaning-Data/blob/master/UCI%20HAR%20Dataset/README.txt) for a detailed description of the variables.
