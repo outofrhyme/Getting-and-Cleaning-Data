@@ -45,13 +45,13 @@ run_analysis <- function(output = 'full') {
         
         data <- rbind(test,train)
         
-        if(x == 'full') {
+        if(output == 'full') {
                 
                 ## Return full data set
                 data
         }
         
-        else if(x == 'meanstd'){
+        else if(output == 'meanstd'){
                 ## Subset to columns containing means and standard deviations only
                 
                 meanstd_cols <- c(1:6, 41:46, 81:86, 121:126, 161:166, 201:202, 214:215, 
@@ -64,7 +64,7 @@ run_analysis <- function(output = 'full') {
                 meanstd
         }
         
-        else if(x == 'tidy'){
+        else if(output == 'tidy'){
                 ## Create tidy data set with the average of each variable for each 
                 ## activity and each subject.
                
